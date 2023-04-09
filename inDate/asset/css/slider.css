@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+* {
+  box-sizing: border-box;
+}
+
+.image .slider {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  bottom: 10px;
+  transform: translate(-50%, -50%);
+  width: 475px;
+  height: 760px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.image .wrapper {
+  overflow: hidden;
+  border-radius: 40px;
+}
+
+#items {
+  width: 10000px;
+  position: relative;
+  top: 0;
+  left: -475px;
+}
+
+#items.shifting {
+  transition: left .2s ease-out;
+}
+
+.image .slide {
+  width: 475px;
+  height: 760px;
+  cursor: pointer;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 1s;
+  position: relative;
+  background: #FFCF47;
+}
+
+.image .control {
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 20px;
+  margin-top: -20px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.image .prev,
+.next {
+  display: none;
+  background-size: 22px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+/* .image .prev {
+  background-image: url(https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/ChevronLeft-512.png);
+  left: -20px;
+}
+
+.image .next {
+  background-image: url(https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/ChevronRight-512.png);
+  right: -20px;
+} */
+
+.image .prev:active,
+.next:active {
+  transform: scale(0.8);
+}
+
+#slider .slide{
+  border-radius: 40px;
+}
+
+@media screen and (min-width:650px) { /*hide mobile menu for desktop*/
+  #slider{
+      display:block;
+  }
+}       
+
+
+@media screen and (max-width:650px) { /*show mobile menu for mobile devices*/
+  #slider{
+      display:none;
+  }
+}
