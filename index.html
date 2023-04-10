@@ -27,7 +27,27 @@
             setTimeout(function() {
               window.location.replace(`./${folderName}/`);
             }, 2000);
-          }
+		}
+	</script>
+
+	<script>
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', 'data.json', true);
+		xhr.onload = function() {
+			if (xhr.status === 200) {
+				var data = JSON.parse(xhr.responseText);
+				var cursor = new URLSearchParams(window.location.search).get('cursor');
+				var url = data.find(function(item) {
+					return item.id === cursor;
+				}).url;
+				// Redirect to the URL
+				window.location.href = url;
+				console.log('Success to redirect');
+			} else {
+				console.log('Failed to load JSON data');
+			}
+		};
+		xhr.send();
 	</script>
 </body>
 </html>
