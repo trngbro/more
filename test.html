@@ -1,35 +1,51 @@
-<a href="?link=1">Image 1</a>
-<a href="?link=2">Image 2</a>
-<a href="?link=3">Image 3</a>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Barcode Container</title>
+  <style>
+    /* Container styles */
+    .barcode-container {
+      width: 200px;
+      height: 100px;
+      background-color: #f8f8f8;
+      border: 1px solid #ccc;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-<!-- Thêm một thẻ img để hiển thị hình ảnh -->
-<img id="image" src="">
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    /* Barcode styles */
+    #barcode {
+      width: 100%;
+      height: auto;
+    }
 
-<script>
-  // Lắng nghe sự kiện click trên các liên kết chứa query là ?link=
-  $('a[href^="?link="]').click(function(event) {
-    // Ngăn chặn hành động mặc định của liên kết
-    event.preventDefault();
-    
-    // Lấy giá trị của query từ href của liên kết
-    var linkId = $(this).attr('href').split('=')[1];
-    
-    // Gọi hàm Ajax để lấy dữ liệu từ file JSON
-    $.ajax({
-      url: 'images.json',
-      dataType: 'json',
-      success: function(data) {
-        // Tìm thông tin hình ảnh tương ứng với linkId trong file JSON
-        var image = data.images.find(function(image) {
-          return image.id === linkId;
-        });
-        
-        // Nếu tìm thấy thông tin hình ảnh, hiển thị lên trang web
-        if (image) {
-          $('#image').attr('src', 'img/' + image.name);
-        }
-      }
+    /* Text styles */
+    .barcode-text {
+      font-size: 14px;
+      text-align: center;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="barcode-container">
+    <svg id="barcode"></svg>
+  </div>
+  <div class="barcode-text">Barcode Value: 12345678</div>
+
+  <!-- Include JsBarcode library -->
+  <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.3/dist/JsBarcode.all.min.js"></script>
+
+  <!-- Generate barcode using JsBarcode -->
+  <script>
+    // Generate barcode
+    JsBarcode("#barcode", "12345678", {
+      format: "code128",
+      displayValue: false,
+      height: 60
     });
-  });
-</script>
+  </script>
+</body>
+</html>
