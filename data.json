@@ -12,12 +12,11 @@
 		"url": "https://youtube.com/playlist?list=PLT210MRmCrVbpemj5awOs0ppnIhnrlnxM"
 	},
 	{
-<<<<<<< HEAD
 		"id": "transcipt",
 		"url": "https://onedrive.live.com/embed?resid=CAF0B1F78D203FDC%2180214&authkey=!AH8D-USIa6rIDc4&em=2"
-=======
+	},
+	{
 		"id": "erp-backup",
 		"url": "https://www.dropbox.com/sh/7dnefuufbjgod2h/AAAPdCI7J1mFIV4c8YDbe6nva?dl=0"
->>>>>>> 7e1b8f0a044eb18ff8490e6fa312c27caa39d74e
 	}
 ]
