@@ -1,120 +1,24 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8">
-    <title> More </title>
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   </head>
-<body oncontextmenu="return false;" onmousedown="return false" onselectstart="return false"  onselectstart="return false" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off>
-  <div class="sidebar">
-    <div class="logo-details">
-      <i class='bx bxl-c-plus-plus icon'></i>
-        <div class="logo_name">trngbro</div>
-        <i class='bx bx-menu' id="btn" ></i>
+<title>Redirect page</title>
+<div id="master-wrap">
+    <link rel="stylesheet" href="style.css" />
+    <div id="logo-box">
+        <div class="animated fast fadeInUp">
+            <div class="icon"></div>
+            <h1 id="head_noticed">Cảm ơn</h1>
+        </div>
+
+        <div class="notice animated fadeInUp">
+            <p id="body_noticed" class="lead">Đang chuyển hướng đến</p>
+            <a class="btn animation" href="javascript:history.back()">&larr; Huỷ</a>
+        </div>
+        <script src="redirect.js"></script>
+        <div class="footer animated slow fadeInUp">
+            <p id="timer">
+                <script type="text/javascript">
+                    countDown();
+                </script>
+            </p>
+            <p class="page_name">trngbro.github.io</p>
+        </div>
     </div>
-    <ul class="nav-list">
-      <li>
-          <i class='bx bx-search' ></i>
-         <input type="text" placeholder="Search...">
-         <span class="tooltip">Search</span>
-      </li>
-      <li>
-        <a href="?link=bachhoaxanh">
-          <i class="bi bi-shop-window"></i>
-          <span class="links_name">Bách hoá xanh</span>
-        </a>
-         <span class="tooltip">Bách hoá xanh</span>
-      </li>
-      <li>
-        <a href="?link=thecoffeehouse">
-          <i class="bi bi-cup-straw"></i>
-          <span class="links_name">The Coffe House</span>
-        </a>
-         <span class="tooltip">The Coffee House</span>
-      </li>
-    </ul>
-  </div>
-  <section class="home-section">
-		<img id="img-display" src="" style="width: 100%; height: auto;">
-		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  </section>
-
-  <script src="script.js"></script>
-
-  <script>
-    
-  </script>
-
-  <script>
-		// Get URL parameter
-		const urlParams = new URLSearchParams(window.location.search);
-		const folderName = urlParams.get('redirect');
-
-		// Redirect to URL
-		if(folderName) {
-            setTimeout(function() {
-              window.location.replace(`./${folderName}/`);
-            }, 2000);
-		}
-	</script>
-
-	<script>
-		var xhr = new XMLHttpRequest();
-		xhr.open('GET', 'data.json', true);
-		xhr.onload = function() {
-		if (xhr.status === 200) {
-			var data = JSON.parse(xhr.responseText);
-			var cursor = new URLSearchParams(window.location.search).get('cursor');
-			var item = data.find(function(item) {
-			return item.id === cursor;
-			});
-			if (item) {
-			// Redirect to the URL
-			window.location.href = item.url;
-			console.log('Success to redirect');
-			} else {
-			// Handle error or redirect to default page
-			console.log('Invalid cursor');
-			}
-		} else {
-			console.log('Failed to load JSON data');
-		}
-		};
-		xhr.send();
-	</script>
-
-  <script>
-    var xhr = new XMLHttpRequest();
-		xhr.open('GET', 'data.json', true);
-		xhr.onload = function() {
-		if (xhr.status === 200) {
-			var data = JSON.parse(xhr.responseText);
-			var file = new URLSearchParams(window.location.search).get('file');
-			var item = data.find(function(item) {
-			return item.id === file;
-			});
-			if (item) {
-			// Redirect to the URL
-        document.open();
-        document.write('');
-        document.close();
-        var embeddedContent = '<title> '+ (item.id)+' </title><iframe src="' + item.url + '" width="100%" height="100%"></iframe>';
-        document.write(embeddedContent);
-        document.close();
-			  console.log('Success to redirect');
-			} else {
-			// Handle error or redirect to default page
-        console.log('Invalid cursor');
-        }
-      } else {
-        console.log('Failed to load JSON data');
-		  }
-		};
-		xhr.send();
-  </script>
-
-</body>
-</html>
+</div>

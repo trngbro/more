@@ -1,38 +1,26 @@
 [
 	{
-		"id": "facebook",
-		"url": "https://www.facebook.com/trng.bro/"
-	},
-	{
-		"id": "instagram",
-		"url": "https://www.instagram.com/trng.xbro/"
-	},
-	{
-		"id": "erp",
-		"url": "https://youtube.com/playlist?list=PLT210MRmCrVbpemj5awOs0ppnIhnrlnxM"
-	},
-	{
-		"id": "cv3rd",
-		"url": "https://onedrive.live.com/embed?resid=CAF0B1F78D203FDC%2180214&authkey=!AH8D-USIa6rIDc4&em=2"
-	},
-	{
-		"id": "transcipt",
-		"url": "https://onedrive.live.com/embed?resid=CAF0B1F78D203FDC%2180241&authkey=!AKu9HKiVTZKBdas&em=2"
-	},
-	{
-		"id": "erp-backup",
-		"url": "https://www.dropbox.com/sh/7dnefuufbjgod2h/AAAPdCI7J1mFIV4c8YDbe6nva?dl=0"
-	},
-	{
 		"id": "aptis-share",
+		"type": "link",
+		"name": "playlist ôn aptis",
 		"url": "https://www.youtube.com/watch?v=hOI-_Xdgz94&list=PLT210MRmCrVZh3hWmUQnAQAIgY98QWKzJ"
 	},
 	{
 		"id": "aptis-buoi1-slide",
+		"type": "file",
+		"name": "Slide bài giảng aptis buổi 1",
 		"url": "https://onedrive.live.com/embed?resid=CAF0B1F78D203FDC%21111360&authkey=!ALyy9xWGPYcA7Hg&em=2"
 	},
 	{
 		"id": "aptis-buoi1-tailieu",
+		"type": "file",
+		"name": "Tài liệu G&V",
+		"url": "https://onedrive.live.com/embed?resid=CAF0B1F78D203FDC%21111359&authkey=!AA_XB0E6ckTELPs&em=2"
+	},
+	{
+		"id": "test",
+		"type": "file",
+		"name": "Chi dung de test",
 		"url": "https://onedrive.live.com/embed?resid=CAF0B1F78D203FDC%21111359&authkey=!AA_XB0E6ckTELPs&em=2"
 	}
 ]
