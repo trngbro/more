@@ -46,5 +46,17 @@
 		"type": "file",
 		"name": "Báo cáo cuối kỳ môn Thiết kế giao diện người dùng, giai đoạn 1",
 		"url": "https://onedrive.live.com/embed?resid=caf0b1f78d203fdc%21176380&authkey=!AEQ-ohXj2wYaANk&em=2"
+	},
+	{
+		"id": "cv",
+		"type": "file",
+		"name": "CV",
+		"url": "https://onedrive.live.com/embed?resid=CAF0B1F78D203FDC%2180214&authkey=!AH8D-USIa6rIDc4&em=2"
+	},
+	{
+		"id": "transcript",
+		"type": "file",
+		"name": "Bảng điểm",
+		"url": "https://onedrive.live.com/embed?resid=CAF0B1F78D203FDC%2180241&authkey=!AKu9HKiVTZKBdas&em=2"
 	}
 ]
