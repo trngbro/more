@@ -55,5 +55,5 @@ function countDown() {
   }
 }
 
-var count = 6; // Timer
+var count = 1; // Timer
 var redirect = redirect(); // Target URL
